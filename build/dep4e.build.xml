@@ -23,7 +23,7 @@
 	<property name="docbook.xsl.xsl-fo" value="${dir.docbook.xsl}/fo/docbook.xsl" />
 	<property name="dir.assets.xsl-fo" value="${basedir}/lib/assets" />
 	
-	<property name="fop.user.configuration.file" value="${basedir}/lib/fop-user-configuration.xml" />
+	<property name="fop.user.configuration.file" value="${basedir}/config/fop-user-configuration.xml" />
 	
 	<!-- Classpath -->
 	<path id="classpath.xslt">
@@ -36,8 +36,8 @@
 	<taskdef name="fop" classname="org.apache.fop.tools.anttasks.Fop" classpathref="classpath.xslt" />
 		
 	<!-- Targets -->
-	<!--<target name="All" depends="Clean, Eclipse, EPUB 3, HTML5, PDF" description="Generate all output formats" /> -->
-	<target name="All" depends="Clean, EPUB 3, HTML5, PDF" description="Generate all output formats" />
+	<target name="All" depends="Clean, Eclipse, EPUB 3, HTML5, PDF" description="Generate all output formats" />
+	
 				
 	<target name="Init" description="Initialise the builds">
 		<echo>ANT Version ${ant.version}</echo>

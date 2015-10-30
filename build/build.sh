@@ -8,7 +8,7 @@ if [ "$JAVA_HOME" == "" ] ; then
 fi
 
 
-cp=../../lib/ant-launcher.jar
+cp=../lib/ant-launcher.jar
 class=org.apache.tools.ant.launch.Launcher
 
-"$JAVA_HOME/bin/java" -showversion -Xmx300000000 -classpath $cp -Dant.home=../.. $class $*
+"$JAVA_HOME/bin/java" -showversion -Xmx300000000 -classpath $cp -Dant.home=.. $class $*
